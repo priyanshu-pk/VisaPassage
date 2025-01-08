@@ -1,2 +1,3 @@
 # VisaPassage
-small scal project  
+small scale project  
+made with HTML / CSS / JS
