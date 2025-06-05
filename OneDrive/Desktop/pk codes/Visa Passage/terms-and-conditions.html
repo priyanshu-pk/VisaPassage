@@ -1,40 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms and Conditions - Visa Passage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .terms-container {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .terms-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .terms-header p {
+            color: var(--light-text);
+            font-size: 1.1rem;
+        }
+
+        .terms-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .terms-section h2 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .terms-section p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .terms-section ul {
+            list-style-type: none;
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .terms-section ul li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .terms-section ul li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--light-text);
+        }
+
+        @media (max-width: 768px) {
+            .terms-container {
+                margin: 100px 1rem 40px;
+                padding: 1.5rem;
+            }
+
+            .terms-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav id="navbar">
         <div class="container">
-            <img src="images/Artboard 2@6x.png" alt="Company Logo" class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="images/Artboard 2@6x.png" alt="Company Logo" class="logo">
+            </a>
             <div class="nav-links">
                 <a href="index.html#home">Home</a>
                 <a href="index.html#who-we-are">Who We Are</a>
-                <div class="dropdown">
-                    <a href="index.html#services">Services</a>
-                    <div class="dropdown-content">
-                        <a href="index.html#services">Study Visa</a>
-                        <a href="index.html#services">Work Visa</a>
-                        <a href="index.html#services">Tourist Visa</a>
-                        <a href="index.html#services">B2B Agent Tie Up</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a href="index.html#countries">Countries</a>
-                    <div class="dropdown-content">
-                        <a href="index.html#countries">USA</a>
-                        <a href="index.html#countries">UK</a>
-                        <a href="index.html#countries">Europe</a>
-                        <a href="index.html#countries">Australia</a>
-                        <a href="index.html#countries">New Zealand</a>
-                        <a href="index.html#countries">Ireland</a>
-                        <a href="index.html#countries">Canada</a>
-                    </div>
-                </div>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#countries">Countries</a>
                 <a href="index.html#contact-us">Contact Us</a>
             </div>
             <button class="contact-btn" id="open-popup">Contact Us</button>
@@ -42,81 +113,91 @@
         </div>
     </nav>
 
-    <main>
-        <section class="policy-section">
-            <div class="container">
-                <div class="section-heading">
-                    <h1>Terms and Conditions</h1>
-                </div>
-                <div class="policy-content">
-                    <p>Last updated: [Date]</p>
-                    <p>Please read these Terms and Conditions carefully before using the Visa Passage website and services.</p>
-                    
-                    <h2>Acceptance of Terms</h2>
-                    <p>By accessing or using our website and services, you agree to be bound by these Terms and Conditions.</p>
-                    
-                    <h2>Use of Services</h2>
-                    <p>You agree to use our services only for lawful purposes and in accordance with these Terms and Conditions.</p>
-                    
-                    <h2>Intellectual Property</h2>
-                    <p>The content on our website, including text, graphics, logos, and images, is the property of Visa Passage and is protected by copyright and other intellectual property laws.</p>
-                    
-                    <h2>Limitation of Liability</h2>
-                    <p>Visa Passage shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.</p>
-                    
-                    <h2>Indemnification</h2>
-                    <p>You agree to indemnify and hold Visa Passage harmless from any claims, losses, or damages arising from your use of our services or violation of these Terms and Conditions.</p>
-                    
-                    <h2>Governing Law</h2>
-                    <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of [Your Jurisdiction].</p>
-                    
-                    <h2>Changes to Terms and Conditions</h2>
-                    <p>We reserve the right to modify these Terms and Conditions at any time. We will notify you of any changes by posting the new Terms and Conditions on this page.</p>
-                    
-                    <h2>Contact Us</h2>
-                    <p>If you have any questions about these Terms and Conditions, please contact us at [contact email].</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Know Visa Passage</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#who-we-are">Who We Are</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#countries">Countries</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Policies</h3>
-                    <ul>
-                        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Customer Reviews</h3>
-                    <ul>
-                        <li><a href="index.html#testimonials">Testimonials</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column social">
-                    <h3>Social</h3>
-                    <div class="social-icons">
-                        <a href="https://wa.me/919891085996" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/visapassage?igsh=cm5pa29xYzRqbzM=" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
+    <div class="terms-container">
+        <div class="terms-header">
+            <h1>Terms and Conditions</h1>
+            <p>Please read these terms and conditions carefully before using our services.</p>
         </div>
-    </footer>
+
+        <div class="terms-section">
+            <h2>1. Introduction</h2>
+            <p>Welcome to Visa Passage. These terms and conditions outline the rules and regulations for the use of our services. By accessing our services, you accept these terms and conditions in full. Do not continue to use Visa Passage's services if you do not accept all of the terms and conditions stated on this page.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>2. Services</h2>
+            <p>Visa Passage provides visa and immigration consultancy services, including but not limited to:</p>
+            <ul>
+                <li>Study visa assistance</li>
+                <li>Work visa processing</li>
+                <li>Tourist visa facilitation</li>
+                <li>B2B agent partnerships</li>
+                <li>Immigration consultation</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>3. Client Responsibilities</h2>
+            <p>As a client of Visa Passage, you agree to:</p>
+            <ul>
+                <li>Provide accurate and complete information</li>
+                <li>Submit all required documents in a timely manner</li>
+                <li>Pay all applicable fees as agreed</li>
+                <li>Maintain communication throughout the process</li>
+                <li>Comply with all applicable laws and regulations</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>4. Our Commitment</h2>
+            <p>Visa Passage commits to:</p>
+            <ul>
+                <li>Provide professional and ethical services</li>
+                <li>Maintain confidentiality of client information</li>
+                <li>Process applications with due diligence</li>
+                <li>Keep clients informed of progress</li>
+                <li>Adhere to all relevant immigration laws</li>
+            </ul>
+        </div>
+
+        <div class="terms-section">
+            <h2>5. Fees and Payments</h2>
+            <p>Our fee structure is transparent and will be clearly communicated before the commencement of services. All fees are subject to change with prior notice. Payment terms and conditions will be specified in the service agreement.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>6. Privacy and Data Protection</h2>
+            <p>We take your privacy seriously. All personal information is collected, processed, and stored in accordance with applicable data protection laws. Please refer to our Privacy Policy for detailed information about how we handle your data.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>7. Limitation of Liability</h2>
+            <p>While we strive to provide the best possible service, Visa Passage cannot guarantee visa approval as final decisions rest with the respective immigration authorities. We are not liable for any decisions made by immigration authorities or any delays in processing beyond our control.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>8. Intellectual Property</h2>
+            <p>All content, logos, and materials on our website and in our documentation are the property of Visa Passage and are protected by intellectual property laws. Unauthorized use is prohibited.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>9. Changes to Terms</h2>
+            <p>We reserve the right to modify these terms and conditions at any time. Changes will be effective immediately upon posting to our website. Continued use of our services constitutes acceptance of the modified terms.</p>
+        </div>
+
+        <div class="terms-section">
+            <h2>10. Contact Information</h2>
+            <p>For any questions regarding these terms and conditions, please contact us through our website or directly at our office.</p>
+        </div>
+
+        <div class="last-updated">
+            <p>Last updated: March 2024</p>
+        </div>
+    </div>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

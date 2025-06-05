@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ireland Visa Information - Visa Passage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .country-hero {
+            height: 85vh;
+            position: relative;
+            overflow: hidden;
+            margin-top: -80px;
+        }
+
+        .country-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+
+        .country-hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .country-hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .country-hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .visa-info-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .visa-section {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .visa-section h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .visa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .visa-card {
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .visa-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .visa-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .visa-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .visa-card ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .visa-card ul li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .requirements-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .requirements-table th,
+        .requirements-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .requirements-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .requirements-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .requirements-table tr:nth-child(even) {
+            background-color: var(--card-bg);
+        }
+
+        .scholarship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .scholarship-card {
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .scholarship-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .scholarship-card p {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .advantage-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .country-hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .visa-info-container {
+                padding: 0 1rem;
+            }
+
+            .visa-section {
+                padding: 1.5rem;
+            }
+
+            .requirements-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/Artboard 2@6x.png" alt="Company Logo" class="logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#who-we-are">Who We Are</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#countries">Countries</a>
+                <a href="index.html#contact-us">Contact Us</a>
+            </div>
+            <button class="contact-btn" id="open-popup">Contact Us</button>
+            <button class="mobile-menu-btn">&#9776;</button>
+        </div>
+    </nav>
+
+    <div class="country-hero">
+        <img src="images/ireland.png" alt="Ireland Flag">
+        <div class="country-hero-content">
+            <h1>Study & Work in Ireland</h1>
+            <p>Your gateway to world-class education and career opportunities in the Emerald Isle</p>
+        </div>
+    </div>
+
+    <div class="visa-info-container">
+        <section class="visa-section">
+            <h2>Student Visa (Stamp 2)</h2>
+            <div class="visa-grid">
+                <div class="visa-card">
+                    <h3>Eligibility Requirements</h3>
+                    <ul>
+                        <li>Acceptance at a recognized Irish institution</li>
+                        <li>Sufficient financial resources (€7,000 minimum)</li>
+                        <li>Private medical insurance</li>
+                        <li>English language proficiency</li>
+                        <li>Valid passport</li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <h3>Application Process</h3>
+                    <ul>
+                        <li>Receive acceptance letter</li>
+                        <li>Pay tuition fees</li>
+                        <li>Complete online application</li>
+                        <li>Submit biometrics</li>
+                        <li>Attend visa interview if required</li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <h3>Required Documents</h3>
+                    <ul>
+                        <li>Valid passport</li>
+                        <li>Acceptance letter</li>
+                        <li>Financial statements</li>
+                        <li>Medical insurance</li>
+                        <li>Academic transcripts</li>
+                        <li>English test results</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="visa-section">
+            <h2>Work Visa Options</h2>
+            <div class="visa-grid">
+                <div class="visa-card">
+                    <h3>Critical Skills Employment Permit</h3>
+                    <ul>
+                        <li>For highly skilled workers</li>
+                        <li>Minimum salary €32,000</li>
+                        <li>Path to permanent residency</li>
+                        <li>Family reunification possible</li>
+                        <li>No labor market test</li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <h3>General Employment Permit</h3>
+                    <ul>
+                        <li>For non-critical skills</li>
+                        <li>Minimum salary €30,000</li>
+                        <li>Labor market test required</li>
+                        <li>Valid for 2 years</li>
+                        <li>Renewable</li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <h3>Graduate Scheme</h3>
+                    <ul>
+                        <li>For recent graduates</li>
+                        <li>Valid for 1-2 years</li>
+                        <li>No minimum salary</li>
+                        <li>Work in any sector</li>
+                        <li>Path to work permit</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="visa-section">
+            <h2>Top Scholarships</h2>
+            <div class="scholarship-grid">
+                <div class="scholarship-card">
+                    <h4>Government of Ireland Scholarship</h4>
+                    <p>Full funding for international students at master's and PhD level</p>
+                </div>
+                <div class="scholarship-card">
+                    <h4>Trinity College Dublin Scholarships</h4>
+                    <p>Merit-based scholarships for undergraduate and postgraduate students</p>
+                </div>
+                <div class="scholarship-card">
+                    <h4>University College Dublin Global Excellence</h4>
+                    <p>Scholarships for international students across all disciplines</p>
+                </div>
+                <div class="scholarship-card">
+                    <h4>NUI Galway International Merit Scholarships</h4>
+                    <p>Partial funding for outstanding international students</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="visa-section">
+            <h2>Why Choose Ireland?</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Quality Education</h3>
+                    <p>Home to world-renowned universities and research centers</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Tech Hub</h3>
+                    <p>European headquarters for major tech companies</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Quality of Life</h3>
+                    <p>Excellent healthcare, safety, and work-life balance</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-globe-europe"></i>
+                    <h3>EU Access</h3>
+                    <p>Gateway to European opportunities and travel</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="visa-section">
+            <h2>Visa Application Timeline</h2>
+            <table class="requirements-table">
+                <thead>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Duration</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>University Application</td>
+                        <td>4-6 months</td>
+                        <td>Research and apply to Irish universities</td>
+                    </tr>
+                    <tr>
+                        <td>Acceptance Processing</td>
+                        <td>2-4 weeks</td>
+                        <td>Receive acceptance letter and pay fees</td>
+                    </tr>
+                    <tr>
+                        <td>Visa Application</td>
+                        <td>4-8 weeks</td>
+                        <td>Complete online application and submit documents</td>
+                    </tr>
+                    <tr>
+                        <td>Biometrics</td>
+                        <td>1-2 weeks</td>
+                        <td>Submit biometric data at VAC</td>
+                    </tr>
+                    <tr>
+                        <td>Visa Processing</td>
+                        <td>2-4 weeks</td>
+                        <td>Final processing and visa issuance</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 

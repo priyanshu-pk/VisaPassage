@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visa and Immigration Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav id="navbar">
         <div class="container">
-            <img src="images/Artboard 2@6x.png" alt="Company Logo" class="logo">
+            <a href="index.html" class="logo-link">
+                <img src="images/Artboard 2@6x.png" alt="Company Logo" class="logo">
+            </a>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#who-we-are">Who We Are</a>
@@ -26,13 +31,13 @@
                 <div class="dropdown">
                     <a href="#countries">Countries</a>
                     <div class="dropdown-content">
-                        <a href="#countries">USA</a>
-                        <a href="#countries">UK</a>
-                        <a href="#countries">Europe</a>
-                        <a href="#countries">Australia</a>
-                        <a href="#countries">New Zealand</a>
-                        <a href="#countries">Ireland</a>
-                        <a href="#countries">Canada</a>
+                        <a href="usa.html">USA</a>
+                        <a href="uk.html">UK</a>
+                        <a href="europe.html">Europe</a>
+                        <a href="australia.html">Australia</a>
+                        <a href="new-zealand.html">New Zealand</a>
+                        <a href="ireland.html">Ireland</a>
+                        <a href="canada.html">Canada</a>
                     </div>
                 </div>
                 <a href="#contact-us">Contact Us</a>
@@ -230,43 +235,69 @@
                     <h2>Our Work In</h2>
                 </div>
                 <div class="country-flags">
-                    <img src="images/us.png" alt="USA">
-                    <img src="images/uk.png" alt="UK">
-                    <img src="images/europe.png" alt="Europe">
-                    <img src="images/ireland.png" alt="Ireland">
-                    <img src="images/canada.png" alt="Canada">
-                    <img src="images/australia.png" alt="Australia">
-                    <img src="images/new zealand.png" alt="New Zealand">
+                    <a href="usa.html"><img src="images/us.png" alt="USA"></a>
+                    <a href="uk.html"><img src="images/uk.png" alt="UK"></a>
+                    <a href="europe.html"><img src="images/europe.png" alt="Europe"></a>
+                    <a href="ireland.html"><img src="images/ireland.png" alt="Ireland"></a>
+                    <a href="canada.html"><img src="images/canada.png" alt="Canada"></a>
+                    <a href="australia.html"><img src="images/australia.png" alt="Australia"></a>
+                    <a href="new-zealand.html"><img src="images/new zealand.png" alt="New Zealand"></a>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials">
+        <section id="testimonials" class="testimonials-section">
             <div class="container">
-                <div class="section-heading">
-                    <h2>Testimonials</h2>
-                </div>
-                <div class="testimonial-carousel">
-                    <div class="testimonial">
-                        <h3>Deepak Choudhary</h3>
-                        <p>Grateful to Manish Sir for helping me secure my UK visit visa in just 20 days! From the very beginning, he guided me through every step with patience and professionalism, ensuring all my documents were perfect. His dedication made the process stress-free. Highly recommend Manish Sir for visa assistance.</p>
+                <h2>What Our Clients Say</h2>
+                <div class="testimonials-carousel">
+                    <button class="carousel-arrow left-arrow" aria-label="Previous testimonials">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="testimonials-container">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p>"Visa Passage made my study abroad journey seamless. Their expert guidance and personalized approach helped me secure my student visa for the UK. Highly recommended!"</p>
+                                <div class="testimonial-author">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Student Visa - UK</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p>"The team at Visa Passage provided exceptional support throughout my work visa application process. Their attention to detail and professional service exceeded my expectations."</p>
+                                <div class="testimonial-author">
+                                    <h4>Michael Chen</h4>
+                                    <p>Work Visa - Canada</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p>"Thanks to Visa Passage, I successfully obtained my student visa for Australia. Their comprehensive guidance and timely assistance made the process stress-free."</p>
+                                <div class="testimonial-author">
+                                    <h4>Emma Thompson</h4>
+                                    <p>Student Visa - Australia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p>"I'm grateful for Visa Passage's expertise in handling my family's visa applications. Their dedication and knowledge made our relocation to New Zealand smooth and successful."</p>
+                                <div class="testimonial-author">
+                                    <h4>David Wilson</h4>
+                                    <p>Family Visa - New Zealand</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial">
-                        <h3>Piyush </h3>
-                        <p>I was introduced to Visa Passage  by a friend who is also going abroad , and I must say, Manish  and his team have done an exceptional job in guiding me through the entire application process. From shortlisting universities to booking my flights, they provided unwavering support every step of the way. I'm so impressed with their service that I've already recommended Visa Passage to many of my friends. Kudos to the entire team for their outstanding assistance!</p>
-                    </div>
-                    <div class="testimonial">
-                        <h3>Hisham</h3>
-                        <p>Visa Passage is simply the best. They guide you so well and their follow ups are great. Manish did an amazing job in getting my admission and visa. A very friendly and helpful service right from the beginning. Would recommend it 10/10.</p>
-                    </div>
-                    <div class="testimonial">
-                        <h3>Rechal</h3>
-                        <p>Amazing advice and service. I was lucky to get a very good consultant. He helped me a lot to get my dream university. They helped me in all the administrative services and the team in fantastic all credit goes to them.</p>
-                    </div>
-                    <div class="testimonial">
-                        <h3>Priyanshu Kumar</h3>
-                        <p>I am Priyanshu and I am joining my dream university. To fulfil that Visa Passage team helped me a lot special thanks Manish and his team as they are such wonderful people . Throughout this journey she helped me a lot so thanks to Manish and team 💗 and Visa Passage team thanks a lot</p>
-                    </div>
+                    <button class="carousel-arrow right-arrow" aria-label="Next testimonials">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </section>
@@ -316,7 +347,7 @@
                 <div class="footer-column social">
                     <h3>Social</h3>
                     <div class="social-icons">
-                        <a href="https://wa.me/919891085996" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://wa.me/919873279394" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                         <!-- <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
                         <a href="https://g.co/kgs/xA9c49b" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
                         <a href href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -332,7 +363,7 @@
             <img src="images/Artboard 2@6x.png" alt="Company Logo" class="popup-logo">
             <h2>Contact Us</h2>
             <!-- <form id="popup-contact-form" onsubmit="sendEmail(); reset(); return false;"> -->
-            <form id="popup-contact-form" action="https://formspree.io/f/xqaawedb"
+            <form id="popup-contact-form" action="https://formspree.io/f/mzzgpynr"
             method="POST">
                 <input type="text" id="name" name="fullName" placeholder="Full Name" required>
                 <input type="tel" id="email" name=" " placeholder="Mobile Number" required>
@@ -345,12 +376,16 @@
             </form>
             <p>OR</p>
             <!-- <button type="submit" class="whatsapp-button">Whatsapp Us  <a href="https://wa.me/919891085996" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></button> -->
-            <a href="https://wa.me/919891085996" target="_blank" class="whatsapp-button">
+            <a href="https://wa.me/919873279394" target="_blank" class="whatsapp-button">
                 Whatsapp Us <i class="fa-brands fa-whatsapp"></i>
             </a>
             <button id="close-popup">&times;</button>
         </div>
     </div>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <script src="script.js"></script>
     <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
@@ -374,48 +409,177 @@
         }
     </script> -->
 
+    <style>
+        /* Add these styles in the existing style section */
+        .testimonials-section {
+            padding: 5rem 0;
+            background-color: var(--background);
+        }
 
+        .testimonials-carousel {
+            position: relative;
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
+        .testimonials-container {
+            display: flex;
+            gap: 2rem;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
 
+        .testimonials-container::-webkit-scrollbar {
+            display: none;
+        }
 
+        .testimonial-card {
+            flex: 0 0 calc(25% - 1.5rem);
+            min-width: calc(25% - 1.5rem);
+            background: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
 
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
 
+        .testimonial-content {
+            position: relative;
+        }
 
+        .quote-icon {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
 
+        .testimonial-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+        }
 
+        .testimonial-author h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
 
+        .testimonial-author p {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin: 0;
+        }
 
+        .carousel-arrow {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            flex-shrink: 0;
+        }
 
+        .carousel-arrow:hover {
+            background-color: var(--primary-dark);
+        }
 
+        .carousel-arrow:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.3);
+        }
 
+        @media (max-width: 1200px) {
+            .testimonial-card {
+                flex: 0 0 calc(33.333% - 1.33rem);
+                min-width: calc(33.333% - 1.33rem);
+            }
+        }
 
+        @media (max-width: 992px) {
+            .testimonial-card {
+                flex: 0 0 calc(50% - 1rem);
+                min-width: calc(50% - 1rem);
+            }
+        }
 
+        @media (max-width: 576px) {
+            .testimonial-card {
+                flex: 0 0 100%;
+                min-width: 100%;
+            }
+        }
+    </style>
 
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-    function sendEmail(){
-        Email.send({
-            Host : "smtp.gmail.com",
-            // Port : 587,
-            // Secure : true,
-            Username : "visaontip@gmail.com",
-            Password : "Applic@1234",
-            // Password : "your-app-password",
-            To : 'visaontip@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "NEW VISA PASSAGE QUERY",
-            Body : "Name: " + document.getElementById("name").value
-                + "<br>Email: " + document.getElementById("email").value
-                + "<br>Phone no.: " + document.getElementById("phone").value
-                + "<br>Message: " + document.getElementById("message").value
-        }).then(
-            message => alert("Message sent successfully")
-        );
-    }
-</script> -->
+    <script>
+        // Add this to your existing script section
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.testimonials-container');
+            const leftArrow = document.querySelector('.left-arrow');
+            const rightArrow = document.querySelector('.right-arrow');
+            const cardWidth = document.querySelector('.testimonial-card').offsetWidth;
+            const gap = 32; // 2rem gap between cards
+            const scrollAmount = cardWidth + gap;
 
+            function scrollLeft() {
+                container.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
 
-    
+            function scrollRight() {
+                container.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+
+            leftArrow.addEventListener('click', scrollLeft);
+            rightArrow.addEventListener('click', scrollRight);
+
+            // Auto-scroll every 5 seconds
+            let autoScrollInterval = setInterval(scrollRight, 5000);
+
+            // Pause auto-scroll on hover
+            container.addEventListener('mouseenter', () => {
+                clearInterval(autoScrollInterval);
+            });
+
+            container.addEventListener('mouseleave', () => {
+                autoScrollInterval = setInterval(scrollRight, 5000);
+            });
+
+            // Reset scroll position when reaching the end
+            container.addEventListener('scroll', () => {
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+                    container.scrollTo({
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USA Visa Information - Visa Passage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .country-hero {
+            height: 85vh;
+            position: relative;
+            overflow: hidden;
+            margin-top: -80px;
+        }
+
+        .country-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+
+        .country-hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .country-hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .country-hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .visa-info-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .visa-section {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .visa-section h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: left;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .visa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .visa-card {
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .visa-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .visa-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .visa-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .visa-card ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .visa-card ul li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .requirements-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .requirements-table th,
+        .requirements-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .requirements-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .requirements-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .requirements-table tr:nth-child(even) {
+            background-color: var(--card-bg);
+        }
+
+        .scholarship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .scholarship-card {
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .scholarship-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .scholarship-card p {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .advantage-card {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--background);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .advantage-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .country-hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .visa-info-container {
+                padding: 0 1rem;
+            }
+
+            .visa-section {
+                padding: 1.5rem;
+            }
+
+            .requirements-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/Artboard 2@6x.png" alt="Company Logo" class="logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#who-we-are">Who We Are</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#countries">Countries</a>
+                <a href="index.html#contact-us">Contact Us</a>
+            </div>
+            <button class="contact-btn" id="open-popup">Contact Us</button>
+            <button class="mobile-menu-btn">&#9776;</button>
+        </div>
+    </nav>
+
+    <div class="country-hero">
+        <img src="images/us.png" alt="USA Flag">
+        <div class="country-hero-content">
+            <h1>Study & Work in the United States</h1>
+            <p>Your gateway to world-class education and career opportunities in the USA</p>
+        </div>
+    </div>
+
+    <div class="visa-info-container">
+        <section class="visa-section">
+            <h2>Student Visa (F-1)</h2>
+            <div class="visa-grid">
+                <div class="visa-card">
+                    <h3>Eligibility Requirements</h3>
+                    <ul>
+                        <li>Acceptance at a SEVP-certified institution</li>
+                        <li>Sufficient financial resources</li>
+                        <li>Strong ties to home country</li>
+                        <li>English language proficiency</li>
+                        <li>Valid passport</li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <h3>Application Process</h3>
+                    <ul>
+                        <li>Receive I-20 from institution</li>
+                        <li>Pay SEVIS fee</li>
+                        <li>Complete DS-160 form</li>
+                        <li>Schedule visa interview</li>
+                        <li>Attend interview at embassy</li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <h3>Required Documents</h3>
+                    <ul>
+                        <li>Valid passport</li>
+                        <li>DS-160 confirmation</li>
+                        <li>I-20 form</li>
+                        <li>SEVIS fee receipt</li>
+                        <li>Financial documents</li>
+                        <li>Academic transcripts</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="visa-section">
+            <h2>Work Visa Options</h2>
+            <div class="visa-grid">
+                <div class="visa-card">
+                    <h3>H-1B Visa</h3>
+                    <ul>
+                        <li>For specialty occupations</li>
+                        <li>Requires bachelor's degree</li>
+                        <li>Employer sponsorship needed</li>
+                        <li>Valid for up to 6 years</li>
+                        <li>Annual cap applies</li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <h3>L-1 Visa</h3>
+                    <ul>
+                        <li>For intracompany transfers</li>
+                        <li>Requires 1 year employment</li>
+                        <li>Managerial or specialized role</li>
+                        <li>Valid for up to 7 years</li>
+                        <li>No annual cap</li>
+                    </ul>
+                </div>
+                <div class="visa-card">
+                    <h3>OPT/CPT</h3>
+                    <ul>
+                        <li>For F-1 students</li>
+                        <li>Optional Practical Training</li>
+                        <li>Curricular Practical Training</li>
+                        <li>STEM extension available</li>
+                        <li>Work authorization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="visa-section">
+            <h2>Top Scholarships</h2>
+            <div class="scholarship-grid">
+                <div class="scholarship-card">
+                    <h4>Fulbright Scholarship</h4>
+                    <p>Full funding for graduate study, research, and teaching</p>
+                </div>
+                <div class="scholarship-card">
+                    <h4>Hubert H. Humphrey Fellowship</h4>
+                    <p>Professional development for mid-career professionals</p>
+                </div>
+                <div class="scholarship-card">
+                    <h4>AAUW International Fellowships</h4>
+                    <p>Support for women pursuing graduate studies</p>
+                </div>
+                <div class="scholarship-card">
+                    <h4>Rotary Peace Fellowship</h4>
+                    <p>Full funding for master's degree in peace studies</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="visa-section">
+            <h2>Why Choose the USA?</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>World-Class Education</h3>
+                    <p>Home to top-ranked universities and research institutions</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Career Opportunities</h3>
+                    <p>Access to global companies and innovative industries</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-globe-americas"></i>
+                    <h3>Cultural Diversity</h3>
+                    <p>Experience a melting pot of cultures and perspectives</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Research Excellence</h3>
+                    <p>Leading in scientific research and technological innovation</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="visa-section">
+            <h2>Visa Application Timeline</h2>
+            <table class="requirements-table">
+                <thead>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Duration</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>University Application</td>
+                        <td>6-12 months</td>
+                        <td>Research and apply to universities</td>
+                    </tr>
+                    <tr>
+                        <td>I-20 Processing</td>
+                        <td>2-4 weeks</td>
+                        <td>After acceptance, receive I-20 form</td>
+                    </tr>
+                    <tr>
+                        <td>SEVIS Payment</td>
+                        <td>1-2 days</td>
+                        <td>Pay SEVIS fee and get receipt</td>
+                    </tr>
+                    <tr>
+                        <td>Visa Application</td>
+                        <td>2-3 weeks</td>
+                        <td>Complete DS-160 and schedule interview</td>
+                    </tr>
+                    <tr>
+                        <td>Visa Processing</td>
+                        <td>1-2 weeks</td>
+                        <td>After successful interview</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html> 
